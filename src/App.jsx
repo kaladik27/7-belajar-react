@@ -1,35 +1,46 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import { Button } from "./button"
+import { Alert } from "./Alert"
+import { Foster } from './Foster'
+
+
+
+function Judul() {
+  return <h1> welcome to paradise
+  </h1>
+
+}
+
+
+
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className='grid place-content-center h-screen '>
+        <Judul></Judul>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <div className='grid place-content-center '>
+        <Alert></Alert>
+        <Button variant="primary" >login</Button>
+        <br />
+        <div className='flex'>
+
+          <Alert></Alert>
+          <Button variant="primary" >login</Button>
+
+        </div>
+        <br />
+        <div>
+          <Foster></Foster>
+        </div>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
+
+
   )
 }
 
-export default App
+export default App;
